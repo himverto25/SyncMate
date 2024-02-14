@@ -1,3 +1,5 @@
+-- Script if for reference purpose
+-- Actual Implementation on MYSQL or CLoudSQL or AWS RDS server.
 --SQL Script to store the required data of the system
 /* Syntax for scripting remains same even if use GCP Cloud SQL, Amazon RDS or on-premise MySQL server, till the time SQL version and vendor are same in all places.*/
 --Creating the main database:

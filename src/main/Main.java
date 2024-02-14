@@ -1,3 +1,5 @@
+package src.main;
+import  src.main.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,8 +8,8 @@ class Ride {
     private String driverName;
     private String driverPhoneNumber;
     private String cabNumber;
-    private boolean inProgress;
-
+    // variable to store whether the current ride is completed or not
+    private boolean inProgress; 
     public Ride(String id, String name, String phone, String cab) {
         this.tripId = id;
         this.driverName = name;
@@ -59,6 +61,7 @@ class Traveler implements User {
             throw new IllegalArgumentException("Ride cannot be null");
         }
         // Share ride details through WhatsApp or SMS
+        // A whatsapp integration service is needed.
         System.out.println("Sharing ride details via WhatsApp/SMS: Trip ID - " + ride.getTripId() +
                 ", Driver Name - " + ride.getDriverName() + ", Driver Phone Number - " + ride.getDriverPhoneNumber() +
                 ", Cab Number - " + ride.getCabNumber());
@@ -71,6 +74,10 @@ class Traveler implements User {
     }
 }
 
+/* 
+Implementing interface would also to avoid forced is-a relationship and thereby
+high level abstraction and security.
+*/
 class TravelerCompanion implements User {
     private String username;
 
@@ -164,11 +171,11 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Sample usage
-            Traveler traveler = new Traveler("John");
-            TravelerCompanion companion = new TravelerCompanion("Alice");
+            Traveler traveler = new Traveler("Shashank");
+            TravelerCompanion companion = new TravelerCompanion("Kushal");
             Admin admin = new Admin("Admin");
 
-            Ride ride = new Ride("123", "John's Driver", "1234567890", "ABC123");
+            Ride ride = new Ride("123", "Shashank", "1234567890", "ABC123");
 
             // Traveler shares ride details
             traveler.shareRideDetails(ride);

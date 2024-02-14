@@ -8,6 +8,8 @@
 */
 
 //Mockito module helps write unit test cases by implementing mock objects of the actual stubs.
+package src.test;
+import  src.test.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

@@ -3,6 +3,8 @@
 Spring-Boot based starters to connect to AWS services such as EC2 instance, ELB
 i.e. Elastic Load Balancer, AWS RDS etc.
 */
+package src.main.controller;
+import  src.main.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

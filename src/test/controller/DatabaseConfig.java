@@ -7,8 +7,9 @@ scaling so as to handle large number of requests made to the system.
 // Framework used: Spring-Boot so as to leverage ready made Spring Starters 
 
 // placeholders must be filled with required data wherever applicable
+package src.test.controller;
+import src.test.*;
 import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
